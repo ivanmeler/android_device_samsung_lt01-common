@@ -60,3 +60,27 @@ BOARD_HAS_EXTENDED_SWITCH := true
 
 # inherit from the proprietary version
 -include vendor/samsung/lt01-common/BoardConfigVendor.mk
+
+# Selinux
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/lt01-common/selinux
+
+BOARD_SEPOLICY_UNION += \
+    file_contexts \
+    te_macros \
+    device.te \
+    dhcp.te \
+    domain.te \
+    file.te \
+    init.te \
+    kickstart.te \
+    mediaserver.te \
+    netmgrd.te \
+    qmux.te \
+    rild.te \
+    secril.te \
+    system.te \
+    ueventd.te \
+    vold.te \
+    wpa_supplicant.te
+    
