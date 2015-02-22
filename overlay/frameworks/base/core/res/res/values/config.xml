@@ -31,7 +31,6 @@
     <!-- Disable the home key unlock setting -->
     <add-resource type="bool" name="config_disableHomeUnlockSetting"></add-resource>
     <bool name="config_disableHomeUnlockSetting">false</bool>
-    <bool name="config_forceDisableHardwareKeyboard">true</bool>
 
     <!-- True if the Irda service should be started at system start -->
     <!-- <bool name="config_enableIrdaManagerService">true</bool> -->
