@@ -20,7 +20,7 @@
 
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_CMDLINE := console=ttySAC2,115200,androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 androidboot.selinux=permissive
 
 # Filesystem
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2235564032
