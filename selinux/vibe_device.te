@@ -1,0 +1,1 @@
+allow vibe_device sysfs:filesystem associate;

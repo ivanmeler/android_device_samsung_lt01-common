@@ -1,6 +1,11 @@
-# MFC firmware
+# Drivers read firmware files /firmware/image
+allow ueventd { radio_efs_file }:file r_file_perms;
+allow ueventd { radio_efs_file }:dir search;
+## More Firmwares
 allow ueventd { firmware_mfc }:file r_file_perms;
-
-# Camera related firmwares
 allow ueventd { firmware_camera }:dir search;
-allow ueventd { firmware_camera }:file r_file_perms;
+allow ueventd firmware_camera:file { read open getattr };
+allow ueventd lcd_device:file rw_file_perms;
+allow ueventd lcd_device:file relabelto;
+allow ueventd vibe_device:file rw_file_perms;
+

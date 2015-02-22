@@ -1,0 +1,2 @@
+allow shell proc_sysrq:file getattr;
+allow shell unlabeled:dir getattr;

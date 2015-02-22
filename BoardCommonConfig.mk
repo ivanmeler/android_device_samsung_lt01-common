@@ -20,7 +20,7 @@
 
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttySAC2,115200
 
 # Filesystem
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2235564032
@@ -64,17 +64,40 @@ BOARD_HAS_EXTENDED_SWITCH := true
 # Selinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/lt01-common/selinux
-
-BOARD_SEPOLICY_UNION := \
-    device.te \
-    domain.te \
-    file.te \
+	
+BOARD_SEPOLICY_UNION += \
+    bluetooth.te \
+    radio.te \
     file_contexts \
+    te_macros \
+    debuggerd.te \
+    device.te \
+    dhcp.te \
+    domain.te \
+    drmserver.te \
+    file.te \
     init.te \
+    kernel.te \
+    kickstart.te \
+    lcd_device.te \
     mediaserver.te \
+    netmgrd.te \
+    platform_app.te \
+    qmiproxy.te \
+    qmuxd.te \
     rild.te \
+    secril.te \
+    servicemanager.te \
+    shell.te \
+    sysinit.te \
     system.te \
+    system_app.te \
+    system_server.te \
+    time_daemon.te \
     ueventd.te \
+    vibe_device.te \
     vold.te \
-    wpa_supplicant.te
-    
+    wpa.te \
+    wpa_supplicant.te \
+    zygote.te
+	

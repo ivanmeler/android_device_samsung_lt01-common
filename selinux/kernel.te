@@ -1,0 +1,2 @@
+allow kernel lcd_device:file relabelto;
+allow kernel vibe_device:file relabelto;

@@ -1,0 +1,1 @@
+allow lcd_device sysfs:filesystem associate;
